@@ -1,0 +1,34 @@
+.blog{
+    width: 90%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #000000;
+}
+.blog p{
+    font-size: 24px;
+    text-align: left;
+    color: #ff0000;
+}
+.blog2{
+    width: 90%;
+    text-align: left;
+    display: inline-block;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+.blog2 a{
+    font-size: 24px;
+}
+.blog2 p{
+    font-size: 18px;
+    color: #000000;
+}
+#time{
+    font-size: 15px;
+    text-align: right;
+}
+.text{
+    padding: 10px;
+    border: 1px solid #000000;
+}
