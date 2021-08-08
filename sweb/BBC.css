@@ -1,0 +1,150 @@
+header {
+    width: 100%;
+    background-color: #333333;
+    color: white;
+    height: 70px;
+    display: flex;
+    position: fixed;
+    top: -70px;
+    left: 0;
+    transition-duration: 0.3s;
+    z-index: 100;
+}
+main {
+    display: block;
+    background-color: whitesmoke;
+}
+.h_left {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h_right {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+
+.h_l_line {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+
+}
+
+
+.h_l_line a {
+    color: white;
+    text-decoration: none;
+}
+
+.h_l_line span {
+    font-size: 40px;
+    font-family: 'Cherry Swash', cursive;
+}
+
+.h_r_line {
+    height: 70px;
+    display: flex;
+    justify-content: center;
+}
+body{
+  background-image: url("bc.jpg");
+  background-size: cover;
+}
+
+
+.h_r_line a i {
+    display: none;
+}
+
+.h_r_line a {
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    color: silver;
+    text-decoration: none;
+    transition-duration: 0.3s;
+}
+
+.h_r_line a:hover {
+    color: white;
+}
+.hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+}
+
+.h_left {
+    width: 30%;
+    background-color: rgba(49, 78, 78, 1);
+}
+
+.header_logo {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5vw;
+}
+
+.header_logo img {
+    height: 6vh;
+    margin-right: 20px;
+}
+
+.h_right {
+    width: 70%;
+}
+
+.h_r_top {
+    height: 10vh;
+    width: 100%;
+    display: flex;
+}
+
+.h_r_bottom {
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.h_r_slide {
+    width: 400%;
+    height: 90vh;
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    transition-duration: 0.5s;
+}
+
+.hero_img {
+    width: 25%;
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+}
+.title_inner {
+    text-align: left;
+}
+
+.title_inner span {
+    font-size: 100px;
+    font-family: 'Alata', sans-serif;
+    position: relative;
+    top: 50px;
+
+}
+
+.title_inner p {
+    margin: 0;
+    font-size: 1.8vw;
+    position: relative;
+    top: 50px;
+}
