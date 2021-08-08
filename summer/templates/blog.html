@@ -1,4 +1,5 @@
 {% load static %}
+{% load markdown_extras %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,14 +18,14 @@
     <br>
     {% for blog in blogs %}
     <div class="blog2">
-        <a>{{ blog.title }}</a>
-        <p id="time">{{ blog.created_datetime }}</p>
-        <div class="text">
-            <p>{{ blog.text | linebreaks }}</p>
-        </div>
+        <div id="title">{{ blog.title }}</div>
+        <hr>
+        <div id="time">掲載日：{{ blog.created_datetime }}</div>
+        {{ blog.text | markdown | safe }}
     </div>
     <br><br>
     {% endfor %}
 </div>
+<br>
 </body>
 </html>

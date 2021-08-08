@@ -38,7 +38,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'markdownx',
 ]
+MDEDITOR_CONFIGS = {
+    'default': {
+        'language': 'en',
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -130,3 +136,9 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+ 
+# ファイルアップロード用
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')

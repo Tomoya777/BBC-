@@ -1,3 +1,6 @@
+body img{
+    width: 50%;
+}
 .blog{
     width: 90%;
     text-align: center;
@@ -17,18 +20,23 @@
     border: 1px solid #000000;
     padding: 10px;
 }
-.blog2 a{
-    font-size: 24px;
-}
+
 .blog2 p{
-    font-size: 18px;
     color: #000000;
 }
 #time{
     font-size: 15px;
     text-align: right;
+    padding-right: 20px;
 }
-.text{
-    padding: 10px;
-    border: 1px solid #000000;
+#title{
+    font-size: 24px;
 }
+#text{
+    font-size: 20px;
+    color: #000000;
+}
+#textred{color: #ff0000;}
+#textgreen{color: #00ff00;}
+#textblue{color: #0000ff;}
+
