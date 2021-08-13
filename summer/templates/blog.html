@@ -13,10 +13,11 @@
 </head>
 <body>
 <br><br>
+<div class="box">
 <div class="blog">
     <p>～掲示板～</p>
     <br>
-    {% for blog in blogs %}
+    {% for blog in blogs|slice:":2" %}
     <div class="blog2">
         <div id="title">{{ blog.title }}</div>
         <hr>
@@ -26,6 +27,16 @@
     <br><br>
     {% endfor %}
 </div>
-<br>
+<div class="menu">メニュー</div>
+</div>
+
+<div class="clear">clear</div>
+
+<br><br>
+<div class="footer">
+    <br>
+    最後
+    <br><br>
+</div>
 </body>
 </html>
