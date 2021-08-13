@@ -1,12 +1,16 @@
 body img{
     width: 50%;
 }
-.blog{
+.box{
     width: 90%;
+    margin: auto;
+    clear: both;
+}
+.blog{
+    width: 80%;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
     border: 1px solid #000000;
+    float: left;
 }
 .blog p{
     font-size: 24px;
@@ -36,6 +40,19 @@ body img{
     font-size: 20px;
     color: #000000;
 }
+.menu{
+    width: 15%;
+    float: right;
+    border: 1px solid #000000;
+}
+.clear{
+    clear: both;
+}
+.footer{
+    width: 100%;
+    background-color: #adadad;
+}
+
 #textred{color: #ff0000;}
 #textgreen{color: #00ff00;}
 #textblue{color: #0000ff;}

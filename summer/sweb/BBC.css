@@ -19,6 +19,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition-duration: 0.3s; /*これをいれたのは？入れたのであれば緑も欲しくない？*/
+
 }
 
 .h_right {
@@ -50,10 +52,6 @@ main {
     display: flex;
     justify-content: center;
 }
-body{
-  background-image: url("bc.jpg");
-  background-size: cover;
-}
 
 
 .h_r_line a i {
@@ -66,16 +64,16 @@ body{
     align-items: center;
     color: silver;
     text-decoration: none;
-    transition-duration: 0.3s;
 }
 
 .h_r_line a:hover {
     color: white;
 }
-.hero {
-    width: 100%;
-    height: 100vh;
-    display: flex;
+.hero_over_over {
+    background-image: url("bc.jpg");
+    background-size: cover;
+    background-attachment: fixed; /*これを追加したほうがいいと思う*/
+    background-position: center;
 }
 
 .h_left {
@@ -125,10 +123,9 @@ body{
 }
 
 .hero_img {
-    width: 25%;
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    height: 100%;
 }
 .title_inner {
     text-align: left;
@@ -146,5 +143,5 @@ body{
     margin: 0;
     font-size: 1.8vw;
     position: relative;
-    top: 50px;
 }
+
