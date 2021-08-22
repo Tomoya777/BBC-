@@ -1,3 +1,4 @@
+
 body img{
     width: 50%;
 }
@@ -6,11 +7,56 @@ body img{
     margin: auto;
     clear: both;
 }
-.blog{
+.box a{
+    color: #0000ff;
+    font-size: 20px;
+}
+.box a:hover{
+    color: #ff0000;
+}
+.blog-main{
+    width: 100%;
+    padding-top: 20px;
+}
+.blog-main p{
+    font-size: 24px;
+    text-align: left;
+    color: #ff0000;
+}
+.blog-main2{
     width: 80%;
     text-align: center;
-    border: 1px solid #000000;
     float: left;
+}
+.blog-main3{
+    width: 40%;
+    height: 300px;
+    text-align: left;
+    border: 1px solid #000000;
+    padding: 10px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    float: left;
+}
+.blog-main3 a{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 100%;
+}
+.blog-main3 a:hover{
+    opacity: 0.06;
+    background-color: #000000;
+}
+.blog-main3 p{
+    color: #000000;
+}
+
+.blog{
+    width: 100%;
+    padding-top: 20px;
 }
 .blog p{
     font-size: 24px;
@@ -18,23 +64,26 @@ body img{
     color: #ff0000;
 }
 .blog2{
-    width: 90%;
+    width: 100%;
+}
+.blog3{
+    width: 95%;
     text-align: left;
     display: inline-block;
     border: 1px solid #000000;
     padding: 10px;
 }
-
-.blog2 p{
+.blog3 p{
     color: #000000;
 }
+
 #time{
     font-size: 15px;
     text-align: right;
     padding-right: 20px;
 }
 #title{
-    font-size: 24px;
+    font-size: 22px;
 }
 #text{
     font-size: 20px;
@@ -43,12 +92,17 @@ body img{
 .menu{
     width: 15%;
     float: right;
+    margin-top: 60px;
     border: 1px solid #000000;
+    position: fixed;
+    right: 0;
+    margin-right: 5%;
+    padding: 20px;
 }
 .clear{
     clear: both;
 }
-.footer{
+footer{
     width: 100%;
     background-color: #adadad;
 }
@@ -56,4 +110,3 @@ body img{
 #textred{color: #ff0000;}
 #textgreen{color: #00ff00;}
 #textblue{color: #0000ff;}
-

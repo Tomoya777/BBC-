@@ -1,0 +1,69 @@
+{% load static %}
+{% load markdown_extras %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>BBC~shibaura~</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/BBC.css' %}">
+
+</head><body class="home blog">
+  <header style="top: 0px;">
+  <div class="h_left">
+    <div class="h_l_line">
+        <span>
+          <p1>BBC</p1>
+          <p2><font size="4">~shibaura~</font></p2>
+        </span>
+    </div>
+  </div>
+  <div class="h_right">
+    <div class="h_r_line">
+      <a href="{% url 'toppage' %}">
+        <div>トップページ</div>
+      </a>
+      <a href="pe-ji2.html">
+        <div>BBCについて</div>
+      </a>
+      <a href="{% url 'blog' %}">
+        <div>掲示板</div>
+      </a>
+      <a href="pe-ji3.html">
+        <div>リンク</div>
+      </a>
+      <a href="pe-ji3.html">
+        <div>メンバーズサイト</div>
+      </a>
+    </div>
+  </div>
+</header>
+<br><br>
+<main>
+<div class="box">
+  <div class="blog">
+    <div class="blog2">
+      <p>～掲示板～</p>
+      <br>
+      <div class="blog3">
+          <div id="title"><b>{{ blog.title }}</b></div>
+          <div id="time">掲載日：{{ blog.created_datetime }}</div>
+          <hr>
+          {{ blog.text | markdown | safe }}
+      </div>
+    </div>
+  </div>
+  <a style="float:right;" href="{% url 'blog' %}">Blog一覧に戻る</a>
+</div>
+<br><br>
+<div class="clear"></div>
+</main>
+<footer>
+    <br>
+    最後
+    <br><br>
+</footer>
+  </body>
+</html>
