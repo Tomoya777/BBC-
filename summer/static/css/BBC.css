@@ -1,3 +1,9 @@
+body{
+    margin: 0;
+    display: flex;
+    flex-flow: column;
+    min-height: 100vh;
+}
 header {
     width: 100%;
     background-color: #333333;
@@ -5,14 +11,14 @@ header {
     height: 70px;
     display: flex;
     position: fixed;
-    top: -70px;
+    top: 0;
     left: 0;
     transition-duration: 0.3s;
     z-index: 100;
 }
 main {
     display: block;
-    background-color: whitesmoke;
+    flex: 1;
 }
 .h_left {
     width: 40%;
@@ -107,7 +113,7 @@ main {
 }
 
 .h_r_bottom {
-    height: 90vh;
+    height: 100vh;
     width: 100%;
     overflow: hidden;
 }

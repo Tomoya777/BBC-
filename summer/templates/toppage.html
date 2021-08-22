@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="{% static 'css/BBC.css' %}">
-  <link href="https://fonts.googleapis.com/css?family=Corben:700" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
   <title>BBCのホームページ</title>
 </head>
 <body class="home blog">
@@ -19,7 +19,7 @@
   </div>
   <div class="h_right">
     <div class="h_r_line">
-      <a href="pe-ji3.html">
+      <a href="{% url 'toppage' %}">
         <div>トップページ</div>
       </a>
       <a href="pe-ji2.html">
