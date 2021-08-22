@@ -38,7 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
+    'social_django',  # 追加
+=======
     'markdownx',
+>>>>>>> 0db77fd43ee90b34e8cd887f87732e8e2571d67a
 ]
 MDEDITOR_CONFIGS = {
     'default': {
@@ -54,6 +58,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
+    'social_django.middleware.SocialAuthExceptionMiddleware',  # 追加
 ]
 
 ROOT_URLCONF = 'summer.urls'
@@ -71,6 +77,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+
+                'social_django.context_processors.backends',  # 追加
+                'social_django.context_processors.login_redirect', # 追加
             ],
         },
     },
@@ -108,6 +117,18 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = (
+    'social_core.backends.open_id.OpenIdAuth',  # OpenId用
+    'social_core.backends.google.GoogleOpenId',  # Google OpenId用
+    'social_core.backends.google.GoogleOAuth2',  # Google OAuth2用
+
+    'social_core.backends.github.GithubOAuth2',  # Github用
+    'social_core.backends.twitter.TwitterOAuth',  # Twitter用
+    'social_core.backends.facebook.FacebookOAuth2',  # Facebook用
+
+    'django.contrib.auth.backends.ModelBackend',  # デフォルトバックエンド、必須。
+)
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
@@ -126,7 +147,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+<<<<<<< HEAD
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [BASE_DIR, 'static']
+=======
 STATIC_URL = 'static/'
+>>>>>>> 0db77fd43ee90b34e8cd887f87732e8e2571d67a
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
