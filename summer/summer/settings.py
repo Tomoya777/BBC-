@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -38,8 +38,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+<<<<<<< HEAD
     'social_django',  # 追加
+=======
+    'markdownx',
+>>>>>>> 0db77fd43ee90b34e8cd887f87732e8e2571d67a
 ]
+MDEDITOR_CONFIGS = {
+    'default': {
+        'language': 'en',
+    }
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -138,10 +147,24 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+<<<<<<< HEAD
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [BASE_DIR, 'static']
+=======
+STATIC_URL = 'static/'
+>>>>>>> 0db77fd43ee90b34e8cd887f87732e8e2571d67a
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+)
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
+ 
+# ファイルアップロード用
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')

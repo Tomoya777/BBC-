@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="{% static 'css/BBC.css' %}">
+  <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+  <title>BBCのホームページ</title>
+</head>
+<body class="home blog">
+  <header style="top: 0px;">
+  <div class="h_left">
+    <div class="h_l_line">
+        <span>
+          <p1>BBC</p1>
+          <p2><font size="4">~shibaura~</font></p2>
+        </span>
+    </div>
+  </div>
+  <div class="h_right">
+    <div class="h_r_line">
+      <a href="{% url 'toppage' %}">
+        <div>トップページ</div>
+      </a>
+      <a href="pe-ji2.html">
+        <div>BBCについて</div>
+      </a>
+      <a href="{% url 'blog' %}">
+        <div>掲示板</div>
+      </a>
+      <a href="pe-ji3.html">
+        <div>リンク</div>
+      </a>
+      <a href="pe-ji3.html">
+        <div>メンバーズサイト</div>
+      </a>
+    </div>
+  </div>
+</header>
+<div class="hero_over_over">
+  　　　　　
+            <div class="hero_margin"></div>
+            <div class="hero_over">
+                <div class="ho_left">
+                    <div class="title_inner">
+                        <span>TO THE<br>NEXT STAGE</span>
+                        <p>中高生の挑戦はどこまで続くのか。</p>
+                        <br>
+                    </div>
+                </div>
+            </div>
+</div>
+</body>
+</html>

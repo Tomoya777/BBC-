@@ -1,0 +1,98 @@
+{% load static %}
+{% load markdown_extras %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>BBC~shibaura~</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/BBC.css' %}">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $('a[href^=#]').click(function() {
+        var speed = 500;
+        var href = $(this).attr("href");
+        var target = $(href == "#" || href == "" ? 'html' : href);
+        var position = target.offset().top-80;
+        $('html').animate({scrollTop:position}, speed, 'swing');
+        return false;
+        });
+        });
+    </script>
+</head><body class="home blog">
+  <header style="top: 0px;">
+  <div class="h_left">
+    <div class="h_l_line">
+        <span>
+          <p1>BBC</p1>
+          <p2><font size="4">~shibaura~</font></p2>
+        </span>
+    </div>
+  </div>
+  <div class="h_right">
+    <div class="h_r_line">
+      <a href="{% url 'toppage' %}">
+        <div>トップページ</div>
+      </a>
+      <a href="pe-ji2.html">
+        <div>BBCについて</div>
+      </a>
+      <a href="{% url 'blog' %}">
+        <div>掲示板</div>
+      </a>
+      <a href="pe-ji3.html">
+        <div>リンク</div>
+      </a>
+      <a href="pe-ji3.html">
+        <div>メンバーズサイト</div>
+      </a>
+    </div>
+  </div>
+</header>
+<br><br>
+<div class="box">
+    <div class="blog-main">
+        <div class="blog-main2">
+          <p>～掲示板～</p>
+          <br>
+          <p id="menu2021">2021年</p>
+          {% for blog in blogs %}
+          {% if blog.created_datetime.year == 2021 %}
+          <div class="blog-main3">
+              <div id="title"><b>{{ blog.title }}</b></div>
+              <div id="time">掲載日：{{ blog.created_datetime }}</div>
+              <hr>
+              {{ blog.text | markdown | safe | truncatewords_html:2 }}
+              <a href="{% url 'detail' blog_id=blog.id %}"></a>
+          </div>
+
+          {% endif %}
+          {% endfor %}
+        </div>
+
+    </div>
+    <div class="menu">
+        <p>年一覧</p>
+        <a href="#menu2021">2021年度</a>
+    </div>
+</div>
+
+<div class="clear"></div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<footer>
+    <br>
+    最後
+    <br><br>
+</footer>
+</body>
+</html>
